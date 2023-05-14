@@ -1,10 +1,16 @@
-//Crea una función maxIndex que reciba una arreglo de números y retorne el índice donde se
-//encuentra el mayor. Si el arreglo está vacío debe retornar -1.
-function maxIndex(){
-    
-}
-// escribe la función maxIndex acá
 
-console.log(maxIndex([1, 3, 2])) // 1
-console.log(maxIndex([10, 9, 8, 7, 6, 5, 4])) // 0
-console.log(maxIndex([])) // -1
+function maxIndex(arreglo) {
+    let max = 0;  
+    for (let i = 0; i < arreglo.length; i++) {    
+      if (arreglo[i] > arreglo[max]) {
+        max = i;
+      }
+    }
+    
+    return max;
+  }
+
+    console.log(maxIndex([1, 2, 3])) // 3
+    console.log(maxIndex([10, 8, 12, 5])) // 12
+    console.log(maxIndex([])) // undefined
+    
